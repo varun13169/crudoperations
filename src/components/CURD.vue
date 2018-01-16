@@ -129,12 +129,6 @@
 
     <v-layout row wrap>
 
-      <!--<ul>-->
-      <!--<li v-for="user in userReadList">-->
-      <!--{{user.name}} : {{user.password}}-->
-      <!--</li>-->
-      <!--</ul>-->
-
       <v-list two-line>
         <template v-for="user in userReadList">
 
@@ -195,7 +189,6 @@
         //  Password: ${this.newUser.password}\n`);
         //
 
-        // e.preventDefault();
       },
 
       updateUserFunc: function () {
@@ -245,18 +238,6 @@
         // } else {
         //   alert("User not found or Password didn't match");
         //   //alert
-        // }
-
-
-        //this.userList.splice(this.userList.findIndex(user), 1);
-
-        // if(this.userList.indexOf(user)==-1){
-        //   alert("User not found or Password didn't match");
-        //   console.log(this.userList.indexOf(user));
-        //   console.log(user.name);
-        //   console.log(user.password);
-        // } else{
-        //   this.userList.splice(this.userList.indexOf(user)+1, 1);
         // }
 
       }
