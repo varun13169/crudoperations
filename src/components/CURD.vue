@@ -151,10 +151,11 @@
 
 
 <script>
-  import Create from '../services/CreateService';
-  import Update from '../services/UpdateService';
-  import Read from '../services/ReadService';
-  import Delete from '../services/DeleteService';
+  // import Create from '../services/CreateService';
+  // import Update from '../services/UpdateService';
+  // import Read from '../services/ReadService';
+  // import Delete from '../services/DeleteService';
+  import ApiServices from '../services/ApiServices'
 
   export default {
     name: "c-u-r-d",
@@ -177,8 +178,11 @@
     methods: {
       newUserFunc: function () {
         console.log("newuse")
-        Create.create({name: this.newUser.name,
-                        password: this.newUser.password});
+        // Create.create({name: this.newUser.name,
+        //                 password: this.newUser.password});
+
+        ApiServices.methods.create({name: this.newUser.name,
+                            password: this.newUser.password})
         //
         // this.userList.push({
         //   name: this.newUser.name,
@@ -192,8 +196,11 @@
       },
 
       updateUserFunc: function () {
-        Update.update({name: this.newUser.name,
-                        password: this.newUser.password});
+        // Update.update({name: this.newUser.name,
+        //                 password: this.newUser.password});
+
+        ApiServices.methods.update({name: this.newUser.name,
+                            password: this.newUser.password})
         // for (var i = 0; i < this.userList.length; i++) {
         //   if (this.userList[i].name == this.updateUser.name) {
         //     this.userList[i].password = this.updateUser.password;
@@ -208,10 +215,17 @@
       },
 
       readUserFunc: function () {
-        Read.read().then((res) => {
-          console.log(res);
-          this.userReadList = res;
-        });
+        // Read.read().then((res) => {
+        //   console.log(res);
+        //   this.userReadList = res;
+        // });
+
+        ApiServices.methods.read()
+          .then((res) => {
+                console.log(res);
+                this.userReadList = res;
+              });
+
         // console.log(this.userReadList);
 
 
@@ -225,8 +239,11 @@
       },
 
       deleteUserFunc: function (username) {
-        Delete.delete({name: username.name,
-                        password: username.password});
+        // Delete.delete({name: username.name,
+        //                 password: username.password});
+
+        ApiServices.methods.delete({name: username.name,
+                            password: username.password});
 
         // console.log(this.userList.findIndex(user => user.name == username.name && user.password == username.password));
         // var index = this.userList.findIndex(user => user.name == username.name && user.password == username.password);
