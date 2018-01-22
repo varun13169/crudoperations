@@ -151,10 +151,6 @@
 
 
 <script>
-  // import Create from '../services/CreateService';
-  // import Update from '../services/UpdateService';
-  // import Read from '../services/ReadService';
-  // import Delete from '../services/DeleteService';
   import ApiServices from '../services/ApiServices'
 
   export default {
@@ -178,85 +174,31 @@
     methods: {
       newUserFunc: function () {
         console.log("newuse")
-        // Create.create({name: this.newUser.name,
-        //                 password: this.newUser.password});
 
         ApiServices.methods.create({name: this.newUser.name,
                             password: this.newUser.password})
-        //
-        // this.userList.push({
-        //   name: this.newUser.name,
-        //   password: this.newUser.password,
-        // });
-        // alert(`Created User with\n
-        //  Name: ${this.newUser.name}\n
-        //  Password: ${this.newUser.password}\n`);
-        //
+
 
       },
 
       updateUserFunc: function () {
-        // Update.update({name: this.newUser.name,
-        //                 password: this.newUser.password});
 
         ApiServices.methods.update({name: this.newUser.name,
                             password: this.newUser.password})
-        // for (var i = 0; i < this.userList.length; i++) {
-        //   if (this.userList[i].name == this.updateUser.name) {
-        //     this.userList[i].password = this.updateUser.password;
-        //     alert(`Updated User with\n
-        //       Name: ${this.updateUser.name}\n
-        //       New Password: ${this.updateUser.password}\n`);
-        //     break;
-        //   } else if (i + 1 == this.userList.length) {
-        //     alert("User Not Found");
-        //   }
-        // }
       },
 
       readUserFunc: function () {
-        // Read.read().then((res) => {
-        //   console.log(res);
-        //   this.userReadList = res;
-        // });
 
         ApiServices.methods.read()
           .then((res) => {
                 console.log(res);
                 this.userReadList = res;
               });
-
-        // console.log(this.userReadList);
-
-
-        // this.userReadList = [];
-        // for (var i = 0; i < this.userList.length; i++) {
-        //   this.userReadList.push({
-        //     name: this.userList[i].name,
-        //     password: this.userList[i].password,
-        //   });
-        // }
       },
 
       deleteUserFunc: function (username) {
-        // Delete.delete({name: username.name,
-        //                 password: username.password});
-
         ApiServices.methods.delete({name: username.name,
                             password: username.password});
-
-        // console.log(this.userList.findIndex(user => user.name == username.name && user.password == username.password));
-        // var index = this.userList.findIndex(user => user.name == username.name && user.password == username.password);
-        // if (index >= 0) {
-        //   this.userList.splice(index, 1);
-        //   alert(`Deleted User with\n
-        //       Name: ${this.username.name}`);
-        //   //delete
-        // } else {
-        //   alert("User not found or Password didn't match");
-        //   //alert
-        // }
-
       }
 
     }
