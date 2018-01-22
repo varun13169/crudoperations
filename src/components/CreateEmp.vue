@@ -3,7 +3,7 @@
     <v-layout row wrap>
 
       <v-flex xs12>
-          <v-card dark color="secondary" class="card">
+          <v-card dark color="secondary" class="create-card">
             <v-card-text class="px-0">
               <h1>CREATE</h1>
             </v-card-text>
@@ -53,11 +53,16 @@
 
 </template>
 
-<style>
-  .card {
-    padding: 50px;
+<style scoped>
+  @import "../styles/styles.css";
+
+  .create-card {
+    transition: 2s ease-in;
   }
 
+  .create-card:hover{
+    transform: rotate(360deg);
+  }
   /*<link href = "./src/styles/styles.css" rel="stylesheet" text="text/css">*/
 
 </style>
@@ -89,7 +94,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>

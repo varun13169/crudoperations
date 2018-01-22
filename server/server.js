@@ -140,8 +140,6 @@ app.post('/delete', function (req, res) {
 
 
 
-//fghfg
-
 app.get('/read', function (req, res) {
 
   let data = [];

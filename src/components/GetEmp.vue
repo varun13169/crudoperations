@@ -2,7 +2,7 @@
 
   <v-layout row>
     <v-flex xs12 sm6 offset-sm3>
-      <v-card>
+      <v-card class="read-card">
         <v-toolbar color="cyan" dark>
           <v-toolbar-side-icon></v-toolbar-side-icon>
           <v-toolbar-title>Employee List</v-toolbar-title>
@@ -62,5 +62,17 @@
 </script>
 
 <style scoped>
+  @import "../styles/styles.css";
+
+  .read-card{
+    top: -700px;
+    animation: bounce 3s ease forwards;
+  }
+
+  @keyframes bounce {
+    0%   {}
+    70%  {transform: translateY(800px)}
+    100% {transform: translateY(750px)}
+  }
 
 </style>

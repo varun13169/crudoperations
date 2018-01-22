@@ -101,8 +101,7 @@ export default {
       this.drawer= false;
     },
     deleteEmp: function () {
-      location.href = "#/delete";
-      this.drawer= false;
+      location.href = "#/delete";this.drawer= false;
     },
   }
 }

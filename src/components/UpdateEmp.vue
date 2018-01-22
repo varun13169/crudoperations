@@ -76,5 +76,6 @@
 </script>
 
 <style scoped>
+  @import "../styles/styles.css";
 
 </style>
