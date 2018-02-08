@@ -3,7 +3,7 @@
     <v-layout row wrap>
 
       <v-flex xs12>
-        <v-card dark color="secondary" class="card">
+        <v-card dark color="secondary" class="update-card">
           <v-card-text class="px-0">
             <h1>UPDATE</h1>
           </v-card-text>
@@ -78,4 +78,11 @@
 <style scoped>
   @import "../styles/styles.css";
 
+  .update-card {
+    transition: 2s ease-in;
+  }
+
+  .update-card:hover{
+    transform: rotate(360deg);
+  }
 </style>
